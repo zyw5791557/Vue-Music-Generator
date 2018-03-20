@@ -1,11 +1,11 @@
 const Koa 		= require('koa');
 const serve 	= require('koa-static');
 const path 		= require('path');
-const history 	= require('koa-history-api-fallback');
+const logger 	= require('koa-logger');
 
 const app 		= new Koa();
 
-app.use(history());
+app.use(logger());
 
 const main 		= serve(path.join(__dirname, './www'));
 
